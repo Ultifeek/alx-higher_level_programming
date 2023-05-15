@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            if j != 0:
-                print(" ", end='')
-            print("{:d}".format(matrix[i][j]), end='')
-        print()
+def max_integer(my_list=[]):
+    length = len(my_list)
+
+    if length == 0:
+        return (None)
+
+    max_int = my_list[0]
+
+    for i in range(1, length):
+        if my_list[i] > max_int:
+            max_int = my_list[i]
+
+    return (max_int)
